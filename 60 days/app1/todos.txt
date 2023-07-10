@@ -1,0 +1,4 @@
+clean
+polish
+fix the comp
+print something
