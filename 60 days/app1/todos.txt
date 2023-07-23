@@ -1,6 +1,3 @@
 clean
 polish
-fix the comp
-print something
-
-Clean the bagClean the bag22
+Return books to library
