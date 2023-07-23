@@ -16,10 +16,15 @@ st.subheader('This is my todo app')
 st.write('This is a todo app that I made in 60 days of code')
 
 
-for todo in todos:
+for index, todo in enumerate(todos):
     todo = todo.strip()
-    st.checkbox(todo)
+    checkbox = st.checkbox(todo, key=todo)
+    if checkbox:
+        todos.pop(index)
+        functions.write_todos(todos)
+        del st.session_state[todo]
+        st.experimental_rerun()
 
 st.text_input(label="Add a todo", placeholder='Add a todo here...', on_change=add_todo, key='new_todo')
 
-st.session_state
+#st.session_state
